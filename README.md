@@ -12,10 +12,10 @@ Runs your CI/CD pipeline on Ubuntu.
 
 ## Steps performed:
 
-Checkout code
+## 1:- Checkout code
 → Pulls your project files from the repository so Maven can access them.
 
-Build with Maven
+## 2:- Build with Maven
 → Executes mvn clean package, which:
 
 Cleans previous builds
@@ -26,14 +26,14 @@ Runs tests
 
 Packages the project (e.g., generates .jar or .war file in target/)
 
-Publish to GitHub Packages
+## 3:- Publish to GitHub Packages
 → Executes mvn deploy -s settings.xml, which:
 
 Uses credentials stored in GitHub Secrets (USERNAME and TOKEN)
 
 Deploys (uploads) the built artifact to GitHub Packages, your Maven package repository.
 
-Verify JAR
+## 4:- Verify JAR
 → Lists the contents of the target/ directory to confirm the JAR/WAR was created successfully.
 
 ## 💡 In short:
